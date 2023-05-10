@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <!-- Lado izquierdo!-->
+    <div class="app-input">
+        <header>
+            <img src="imagenes/Logo.png" alt="logo alura" class="logo">           
+            <p>Creado por:  <b>Maicol Egas</b></p>            
+        </header>
+        <section>
+            <!--<input id="cadenaTexto" class="input" type="text"placeholder="Ingrese el texto aqui"></input>!-->
+            <textarea id="cadenaTexto" class="input" placeholder="Ingresa el mensaje a encriptar"></textarea>
+        </section>
+        <footer>
+            <p> "Solo letras minúsculas y sin acentos"</p>
+            <div>
+                <button onclick="encriptar()"  class="encr">Encriptar</button>
+                <button onclick="desencriptar()" class="dese" id="btn-dese">Desencriptar</button>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="img-logo" id="linkedin" style="list-style: none;"><a target="_blank" href="https://www.linkedin.com/in/maicolestibenegas/"  ><img src="imagenes/L_Logo.png" alt="logo-LinkedIn"></a></li>
+                    <li class="img-logo" style="list-style: none;"><a target="_blank" href="https://twitter.com/MaicolEgas"> <img src="imagenes/T_Logo.png" alt="logo-Tiwitter"></a></li>
+                    <li class="img-logo" style="list-style: none;"><a target="_blank" href="https://github.com/MaicolEgas43"> <img src="imagenes/G_Logo.png" alt="logo-Github"> </a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Lado derecho!-->
+    <div class="app-output" id="empty-output">
+        <div class="first-empty-output" id="first-empty-output">
+            <img id="img-empty-output" src="imagenes/Muñeco.png" alt="diamante">
+            <h4 id="msj-empty-output">No se encontro ningún mensaje</h4>
+            <p >Ingresa el texto que deseas encriptar o desencriptar</p>
+
+        </div>
+        <div class="view-text" id="view-text">
+            <div class="btn-copiar" id="btn-copiar">
+                <button class="dese" id="btn-dese" onclick="copiar()">Copiar</button>
+            </div>
+        </div>  
+    </div>
+
+    <script src="script.js"></script>
+    <script></script>
+    
+</body>
+</html>
