@@ -69,11 +69,11 @@ button {
 }
 
 .nav-menu{
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    justify-content: first baseline ;
 }
 
-.nav-menu ul, .nav-menu li, .nav-menu a{
+.nav-menu ul, .nav-menu li, a{
     display: flex ;
     margin: 7px 7px ;  
     color: #0a3871;
@@ -134,7 +134,7 @@ button {
     background-color: #0a3871;
 }
 .app-output {
-    width: 280px;
+    width: 300px;
     height: 100%;
     border-radius: 1em;
     background-color: white;
@@ -198,55 +198,80 @@ button {
 
 .btn-copiar{
     margin-top: 20px;
-    display: none;
-    text-align: center;
-    width: 100%;
+    width: 10%;
+    align-items: end;
+  }
+  .view-text{
+    justify-content: end;
+  }
+
+
+  /*Estilos en JS*/
+
+  .nuevos-estilos{
+    color: "#0A3871";
+    font-size: 26px;
   }
 
 @media screen and (max-width: 768px) {
+    *{
+        margin: 5px 5px;
+    }
+    
     body {
-        flex-flow: column nowrap;
-        gap: 20px;
+        display: inline;      
         padding: 15px 30px;
     }
 
     .app-input {
         height: calc(100% - 180px);
+        width: auto;
+        justify-content: center;
+    }
+    .app-input header {
+        display: block;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding-top: 20px;
     }
 
     .app-input,
     .app-input section,
     .app-input footer {
         width: 100%;
+        height: auto;
         margin: 0;
-    }
-
-    /*Section*/
-    .app-input section textarea {
-        font-size: 15px ;
-    }
-
-    .app-output {
-        width: 100%;
-        height: 160px;
-    }
-    #empty-output{
         
-        width: 100%;
-        margin-top: 15%;
     }
-
-    .empty-output h4 {
-        padding: 10px 0;
+    /*Section*/
+    #cadenaTexto{
+        padding: 30px 15px;
     }
-
-    .empty-output img {
-        display: none;
-    }
-
-    .output button {
+    /*Lado izquierdo*/
+    .app-output  {
         width: 100%;
     }
+    .first-empty-output{
+        width: 100%;
+        height: 80%;
+        justify-content: center;
+    }
+    #empty-output, .output {
+    position: relative;
+    display: flex;    
+    width: 90%;
+    height: 30%;
+    padding: 10px 10px;
+    background-color: #d8dfe8;
+    border-radius: 1em;
+    padding:  5% 5%;
+    align-items: center;
+}
+#img-empty-output{
+    display: none;: ;;
+}
+
 
 
 }
